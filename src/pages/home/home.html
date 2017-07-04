@@ -1,14 +1,9 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <super-tabs id="mainTabs" tabsPlacement="bottom" selectedTabIndex="1" toolbarColor="dark" toolbarBackground="white" indicatorColor="dark" badgeColor="danger" [config]="{ sideMenu: 'left' }" (tabSelect)="onTabSelect($event)">
+    <super-tab [root]="page1" title="Home" icon="home" id="homeTab"></super-tab>
+    <super-tab [root]="page2" title="Ubicacion" icon="pin" id="locationTab"></super-tab>
+    <super-tab [root]="page3" title="Likes" icon="heart" id="favouritesTab"></super-tab>
+    <super-tab [root]="page2" title="Perfil" icon="person" id="person"></super-tab>
+    <super-tab [root]="page1" title="Ajustes" icon="settings" id="settings"></super-tab>
+  </super-tabs>
 </ion-content>
